@@ -1,0 +1,8 @@
+__pycache__
+.vscode
+.ipynb_checkpoints
+ROD-Dataset
+runs/detect/train-2/weights/
+runs/detect/predict-2/weights/
+runs/detect/val
+
