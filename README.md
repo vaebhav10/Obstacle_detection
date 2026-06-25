@@ -17,7 +17,7 @@ CUDA
 OpenCV  
 YOLOv8
 
-### 3. Model Weights Distribution Note
+### Model Weights Distribution Note
 > ⚠️ **File Size Management:** Due size constraints only the final optimized checkpoint weight file (`best.pt`) has been retained directly inside the `weights/` directory of this repository. Supplementary validation and intermediate weights (`last.pt`) are omitted via `.gitignore`.
 
 ## Installation
@@ -31,9 +31,11 @@ navigate to the project
 ```bash
 cd Obstacle_detection
 ```
-Execute Live Edge Tracking
+Execute Live Edge Tracking to t
 ```bash
 python live.py 
 ```
+The `live.py` serves as the main deployment application for this pipeline. It captures camera video, passes them down to the CUDA-accelerated model, and outputs a live visual track with drawn class bounding boxes.
 
+Press `q` to terminate the `live.py` file
 
