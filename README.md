@@ -2,7 +2,7 @@
 
 ## Overview 
 This project uses transfer learning using **YOLOv8m** pretrained model to detect/track 25 distinct outdoor road obstacles  
-e.g: Persong, Car, Bike, tree etc...
+e.g: Person, Car, Bike, tree etc...
 
 ![Prediction Interface](runs/detect/predict-3/image.jpg)
 
@@ -12,10 +12,9 @@ e.g: Persong, Car, Bike, tree etc...
 
 ## Tech Stacks
 Python  
-PyTorch   
-CUDA  
+PyTorch (CUDA Accelerated)  
 OpenCV  
-YOLOv8
+YOLOv8 (Ultralytics)
 
 ### Model Weights Distribution Note
 > ⚠️ **File Size Management:** Due size constraints only the final optimized checkpoint weight file (`best.pt`) has been retained directly inside the `weights/` directory of this repository. Supplementary validation and intermediate weights (`last.pt`) are omitted via `.gitignore`.
@@ -28,14 +27,19 @@ git clone https://github.com/vaebhav10/Obstacle_detection.git
 ```
 navigate to the project 
 
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
 ```bash
 cd Obstacle_detection
 ```
-Execute Live Edge Tracking to t
+Execute Live Tracking
 ```bash
 python live.py 
 ```
 The `live.py` serves as the main deployment application for this pipeline. It captures camera video, passes them down to the CUDA-accelerated model, and outputs a live visual track with drawn class bounding boxes.
 
-Press `q` to terminate the `live.py` file
+Press `q` to terminate the live tracking window
 
