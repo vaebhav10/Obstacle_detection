@@ -4,6 +4,10 @@
 This project uses transfer learning using **YOLOv8m** pretrained model to detect/track 25 distinct outdoor road obstacles  
 e.g: Person, Car, Bike, tree etc...
 
+### dataset link 🔗:
+```bash
+https://www.kaggle.com/datasets/abtinzandi/obstacle-detection-dataset
+```
 ![Prediction Interface](runs/detect/predict-3/image.jpg)
 
 ### Evaluation Metrics
