@@ -1,0 +1,39 @@
+# Obstacle detection using YOLOv8 (medium)
+
+## Overview 
+This project uses transfer learning using **YOLOv8m** pretrained model to detect/track 25 distinct outdoor road obstacles  
+e.g: Persong, Car, Bike, tree etc...
+
+![Prediction Interface](runs/detect/predict-3/image.jpg)
+
+### Evaluation Metrics
+* **Validation Set:** `mAP50` = **92.40%** | `mAP50-95` = **76.01%**
+* **Blind Test Set:** `mAP50` = **92.01%** | `mAP50-95` = **76.90%**
+
+## Tech Stacks
+Python  
+PyTorch   
+CUDA  
+OpenCV  
+YOLOv8
+
+### 3. Model Weights Distribution Note
+> ⚠️ **File Size Management:** Due size constraints only the final optimized checkpoint weight file (`best.pt`) has been retained directly inside the `weights/` directory of this repository. Supplementary validation and intermediate weights (`last.pt`) are omitted via `.gitignore`.
+
+## Installation
+Clone the repository:
+
+```bash
+git clone https://github.com/vaebhav10/Obstacle_detection.git
+```
+navigate to the project 
+
+```bash
+cd Obstacle_detection
+```
+Execute Live Edge Tracking
+```bash
+python live.py 
+```
+
+
