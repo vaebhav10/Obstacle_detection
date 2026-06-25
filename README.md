@@ -28,18 +28,15 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/vaebhav10/Obstacle_detection.git
+cd Obstacle_detection
 ```
-navigate to the project 
 
-Install dependencies:
+**Install dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
 
-```bash
-cd Obstacle_detection
-```
-Execute Live Tracking
+**Execute Live Tracking**
 ```bash
 python live.py 
 ```
