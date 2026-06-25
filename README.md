@@ -6,6 +6,8 @@ e.g: Person, Car, Bike, tree etc...
 
 ### Dataset
 * **Source:** [Kaggle Obstacle Detection Dataset](https://www.kaggle.com/datasets/abtinzandi/obstacle-detection-dataset) 🔗
+
+  
 ![Prediction Interface](runs/detect/predict-3/image.jpg)
 
 ### Evaluation Metrics
