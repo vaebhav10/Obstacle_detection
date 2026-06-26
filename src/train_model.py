@@ -1,10 +1,14 @@
 from ultralytics import YOLO
 
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent
+
+
 if __name__ == "__main__":
     model = YOLO('yolov8m.pt')
     
     result = model.train(
-        data='ROD-Dataset/data.yaml',
+        data=BASE_DIR/'ROD-Dataset/data.yaml',
         epochs=15,
         imgsz=640,
         workers=8,
