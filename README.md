@@ -21,7 +21,7 @@ OpenCV
 YOLOv8 (Ultralytics)
 
 ### File Note
-> **File Size Management:** Due size constraints only the final optimized weight file (`best.pt`) has been included inside the `weights/` directory of this repository.
+> **File Size Management:** Due to size constraints only the final optimized weight file (`best.pt`) has been included inside the `weights/` directory of this repository.
 
 ## Installation
 Clone the repository:
