@@ -1,24 +1,36 @@
+from pathlib import Path
+
 import cv2
 from ultralytics import YOLO
-from pathlib import Path
+import time 
 BASE_DIR = Path(__file__).resolve().parent
 
-model = YOLO(BASE_DIR/"weights/best.pt")
-
+model = YOLO(BASE_DIR / "weights/best.pt")
 cap = cv2.VideoCapture(0)
+cap.set(3, 640)
+cap.set(6, 480)
 
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        break
+start = time.time()
 
-    result = model.predict(source=frame, stream=True, conf=0.70)
-    for r in result:
-        annotated_frame = r.plot()
-    cv2.imshow("Real time obstacle detection", annotated_frame)
-
+while True :
+    success , img = cap.read()
+    results = model(img, stream = True)
+    for r in results:
+        frame = r.plot()
+        
+    end = time.time()
+    fps = 1/(end - start)
+    start = end
+    h, w = frame.shape[:2]
+    
+    cv2.putText(
+        frame,
+        f'fps: {int(fps)}',(5, h-5),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        1,  
+        (0, 255, 0),
+        2
+    )
+    cv2.imshow("Detecting...", frame)
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
-
-cap.release()
-cv2.destroyAllWindows()
