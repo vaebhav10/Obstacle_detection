@@ -9,10 +9,10 @@ model = YOLO(BASE_DIR/"weights/best.pt")
 
 path =input('Enter image path for detection :')
 
-result=model.predict(source=BASE_DIR/path,save=True,conf=0.30)
+result = model.predict(source=BASE_DIR/path,save=True,conf=0.30)
 for r in result:
-    annotated_frame = r.plot()
-img_rgb = cv2.cvtColor(annotated_frame, cv2.COLOR_BGR2RGB)
+    frame = r.plot()
+img_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
 plt.figure(figsize=(10, 10)) 
 plt.imshow(img_rgb)
