@@ -20,8 +20,8 @@ PyTorch (CUDA Accelerated)
 OpenCV  
 YOLOv8 (Ultralytics)
 
-### Model Weights Distribution Note
-> ⚠️ **File Size Management:** Due size constraints only the final optimized checkpoint weight file (`best.pt`) has been retained directly inside the `weights/` directory of this repository. Supplementary validation and intermediate weights (`last.pt`) are omitted via `.gitignore`.
+### File Note
+> **File Size Management:** Due size constraints only the final optimized weight file (`best.pt`) has been included inside the `weights/` directory of this repository.
 
 ## Installation
 Clone the repository:
