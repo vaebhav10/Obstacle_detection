@@ -18,10 +18,10 @@ e.g: Person, Car, Bike, tree etc...
 Python  
 PyTorch (CUDA Accelerated)  
 OpenCV  
-YOLOv8 (Ultralytics)
+[YOLOv8 (Ultralytics)](https://docs.ultralytics.com/models/yolov8#overview)
 
 ### File Note
-> **File Size Management:** Due to size constraints only the final optimized weight file (`best.pt`) has been included inside the `weights/` directory of this repository.
+Due to size constraints only the final optimized weight file (`best.pt`) has been included inside the `weights/` directory of this repo.
 
 ## Installation
 Clone the repository:
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 ```bash
 python live.py 
 ```
-The `live.py` serves as the main deployment application for this pipeline. It captures camera video, passes them down to the CUDA-accelerated model, and outputs a live visual track with drawn class bounding boxes.
+The `live.py` serves as the main deployment application for this pipeline. It captures camera video, passes them frames to the model, and outputs a live visual track with drawn class bounding boxes.
 
 Press `q` to terminate the live tracking window
 
